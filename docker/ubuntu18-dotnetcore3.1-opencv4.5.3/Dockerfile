@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:3.1-bionic
+FROM mcr.microsoft.com/dotnet/sdk:3.1-bionic-arm64v8
 
 ENV DEBIAN_FRONTEND=noninteractive
 ARG OPENCV_VERSION=4.5.3
@@ -17,10 +17,6 @@ RUN apt-get update && apt-get -y install --no-install-recommends \
       git \
       libtbb-dev \
       libatlas-base-dev \
-      libgtk2.0-dev \
-      libavcodec-dev \
-      libavformat-dev \
-      libswscale-dev \
       libdc1394-22-dev \
       libxine2-dev \
       libv4l-dev \
@@ -31,7 +27,6 @@ RUN apt-get update && apt-get -y install --no-install-recommends \
       libopencore-amrwb-dev \
       libavresample-dev \
       x264 \
-      libtesseract-dev \
       libgdiplus \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/*
