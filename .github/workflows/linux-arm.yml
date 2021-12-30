@@ -1,6 +1,6 @@
 name: Linux ARM (Docker)
 
-on:
+on:  
   pull_request:
     types: [synchronize, opened]
   push:
